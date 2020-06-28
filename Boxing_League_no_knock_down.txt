@@ -1,2 +1,0 @@
-local a = game.Workspace[game.Players.LocalPlayer.Name].RagdollR15
-a:Destroy()
