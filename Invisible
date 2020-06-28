@@ -1,4 +1,7 @@
---Make you be in visible
+--Make you be in visible(Server side)
+--You can still see your character but other don't!
+--This's great to be ghost in Roleplay game 👻
+--This may Have a problem with few script(some game that need your location)
 --[[
 IronBrew:tm: obfuscation; Version 2.7.2
 ]]
