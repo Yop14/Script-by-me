@@ -1,0 +1,79 @@
+--Bypass
+--local baaa = game:GetService("Lighting")
+--local aaa = baaa:FindFirstChild("AntiExploiter")
+--aaa:Destroy()
+--Wally Gui
+local library = loadstring(game:HttpGet(('https://pastebin.com/raw/FsJak6AT')))() -- It's obfuscated, I won't let you see my ugly coding skills. =)
+
+local w = library:CreateWindow("Kram Life") --GUI name
+
+local b = w:CreateFolder("TP Places") --folder name(actually It's second topic)
+
+b:Label("Made by Yop14",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
+
+b:Button("Blink",function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-17.6977787,41.7913742,-211.08963)
+end)
+
+b:Button("TechnicShop",function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-11.2850304,25.9024811,691.622864)
+end)
+
+b:Button("MetalShop",function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-102.72187,25.9228706,558.898254)
+end)
+
+b:Button("RiceMill",function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-334.417786,68.2477951,-682.395508)
+end)
+
+b:Button("Mine",function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-376.841461,27.1852074,215.312286)
+end)
+
+b:Button("HuntingStore",function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-900.791016,32.9980049,614.274719)
+end)
+
+b:Button("SawMill",function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-45.3753433,33.031765,-697.432068)
+end)
+
+local x = library:CreateWindow("")
+
+local c = x:CreateFolder("Speed")
+
+c:Button("Speed15",function()
+    _G.WS = "15";
+    local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+    Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+    Humanoid.WalkSpeed = _G.WS;
+    end)
+    Humanoid.WalkSpeed = _G.WS;
+end)
+
+c:Button("Speed30",function()
+    _G.WS = "30";
+    local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+    Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+    Humanoid.WalkSpeed = _G.WS;
+    end)
+    Humanoid.WalkSpeed = _G.WS;
+end)
+
+c:Button("Speed40(Lag)",function()
+    _G.WS = "40";
+    local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+    Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+    Humanoid.WalkSpeed = _G.WS;
+    end)
+    Humanoid.WalkSpeed = _G.WS;
+end)
+
+local e = x:CreateFolder("Bypass")
+
+e:Button("press me 1 time",function()
+    local baaa = game:GetService("Lighting")
+    local aaa = baaa:FindFirstChild("AntiExploiter")
+    aaa:Destroy()
+end)

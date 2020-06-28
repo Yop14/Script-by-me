@@ -1,0 +1,71 @@
+local library = loadstring(game:HttpGet(('https://pastebin.com/raw/FsJak6AT')))() -- It's obfuscated, I won't let you see my ugly coding skills. =)
+
+local w = library:CreateWindow("Dawn of Aurora") --GUI name
+
+local b = w:CreateFolder("a") --folder name(actually It's second topic)
+local c = w:CreateFolder("b")
+
+b:Label("Made by Yop14",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
+
+b:Button("Tpto(All)loot",function()
+    a = game:GetService("Workspace")
+    b = a.Drops:GetChildren()
+    for i,v in pairs(b) do
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Hitbox.CFrame
+    wait(5)
+    end
+end)
+
+b:Button("deleteFallDamage",function()
+    c = game.Players.LocalPlayer.PlayerScripts:FindFirstChild("Fall Damage Client")
+    c:Destroy()
+end)
+
+b:Button("TptoBank",function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(338.661041,110.883057,-3221.79175)
+end)
+
+b:Button("TptoSpawn",function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(448.759613,55.0957718,-461.391907)
+end)
+
+c:Button("Altclick=Delete",function()
+    local Plr = game:GetService("Players").LocalPlayer
+    local Mouse = Plr:GetMouse()
+
+    Mouse.Button1Down:connect(function()
+    if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftAlt) then return end
+    if not Mouse.Target then return end
+    Mouse.Target:Destroy()
+    end)
+end)
+
+c:Button("Ctrlclick=TP",function()
+    local Player = game.Players.LocalPlayer
+    local Mouse = Player:GetMouse()
+    local UserInputService = game:GetService('UserInputService')
+    local HoldingControl = false
+    Mouse.Button1Down:connect(function()
+    if HoldingControl then
+    Player.Character:MoveTo(Mouse.Hit.p)
+    end
+    end)
+    UserInputService.InputBegan:connect(function(Input, Processed)
+    if Input.UserInputType == Enum.UserInputType.Keyboard then
+    if Input.KeyCode == Enum.KeyCode.LeftControl then
+    HoldingControl = true
+    elseif Input.KeyCode == Enum.KeyCode.RightControl then
+    HoldingControl = true
+    end
+    end
+    end)
+    UserInputService.InputEnded:connect(function(Input, Processed)
+    if Input.UserInputType == Enum.UserInputType.Keyboard then
+    if Input.KeyCode == Enum.KeyCode.LeftControl then
+    HoldingControl = false
+    elseif Input.KeyCode == Enum.KeyCode.RightControl then
+    HoldingControl = false
+    end
+    end
+    end)
+end)
