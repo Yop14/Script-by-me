@@ -2,6 +2,7 @@
 --You can still see your character but other don't!
 --This's great to be ghost in Roleplay game 👻
 --This may Have a problem with few script(some game that need your location)
+--loadstring(game:HttpGet(('https://raw.githubusercontent.com/Yop14/Script-by-me/master/Invisible'),true))()
 --[[
 IronBrew:tm: obfuscation; Version 2.7.2
 ]]
