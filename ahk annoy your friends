@@ -1,0 +1,10 @@
+;ahk = Auto hot key
+table := ["Text1","Text2","Text3"]
+^!x:: ;Press control + alt + x And it will sent you anoying text
+	for i, v in table
+	 {
+	  Send, % v
+	  SendInput {Return}
+	  Sleep, 3000
+	 }
+Esc::ExitApp ;Esc to Close app
