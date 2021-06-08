@@ -1,0 +1,90 @@
+--Wally's UI Library v2
+local library = loadstring(game:HttpGet("https://pastebin.com/raw/HYcfs6KC", true))()
+library.options.underlinecolor = "rainbow" --RAINBOW Epic!
+local w = library:CreateWindow('Lockpicking Simulator')
+w:Section('Made by Yop14')
+
+local b111 = w:Button("TpinVIPzone",function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(92.8055496, 14.4980011, 307.204987, 0.999937177, 9.75625714e-09, 0.0112110702, -1.0531191e-08, 1, 6.90631481e-08, -0.0112110702, -6.91768776e-08, 0.999937177)
+end)
+
+local b0 = w:Button("NoLootGui",function()
+	game.Players.LocalPlayer.PlayerGui.RewardsSlider:Destroy()
+end)
+
+local b1 = w:Button("SellTeleport",function()
+	game:GetService("ReplicatedStorage").Events.SellTeleport:FireServer()
+end)
+
+w:Section('-')
+
+local b2 = w:Button("Spawner1Loot",function()
+for i,v in pairs(game.Workspace.Spawner1:GetChildren()) do
+	if v:IsA("Part") then
+		if v.Taken.Value == true then
+			v.Chest.Part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			v.Chest.Part.CanCollide = false
+			fireclickdetector(v.Chest.ClickDetector)
+		end
+	end
+	end
+end)
+
+local b3 = w:Button("Spawner2Loot",function()
+	for i,v in pairs(game.Workspace.Spawner2:GetChildren()) do
+		if v:IsA("Part") then
+			if v.Taken.Value == true then
+				v.Chest.Part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+				v.Chest.Part.CanCollide = false
+				fireclickdetector(v.Chest.ClickDetector)
+			end
+		end
+	end
+end)
+
+local b4 = w:Button("Spawner3Loot",function()
+	for i,v in pairs(game.Workspace.Spawner3:GetChildren()) do
+		if v:IsA("Part") then
+			if v.Taken.Value == true then
+				v.Chest.Part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+				v.Chest.Part.CanCollide = false
+				fireclickdetector(v.Chest.ClickDetector)
+			end
+		end
+	end
+end)
+
+local b5 = w:Button("Spawner4Loot",function()
+	for i,v in pairs(game.Workspace.Spawner4:GetChildren()) do
+		if v:IsA("Part") then
+			if v.Taken.Value == true then
+				v.Chest.Part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+				v.Chest.Part.CanCollide = false
+				fireclickdetector(v.Chest.ClickDetector)
+			end
+		end
+	end
+end)
+
+local b6 = w:Button("Spawner5Loot",function()
+	for i,v in pairs(game.Workspace.Spawner5:GetChildren()) do
+		if v:IsA("Part") then
+			if v.Taken.Value == true then
+				v.Chest.Part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+				v.Chest.Part.CanCollide = false
+				fireclickdetector(v.Chest.ClickDetector)
+			end
+		end
+	end
+end)
+
+w:Section('-')
+
+local b7 = w:Button("DungeonLoot",function()
+for _,E in pairs(game.Workspace.MazeTest:GetDescendants()) do
+	if E.Name == "Touch" then
+		E.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+		--firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,v,0)
+	end
+end
+end)
